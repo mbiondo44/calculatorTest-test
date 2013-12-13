@@ -1,20 +1,15 @@
 package com.example.calculator.test;
 
-import static org.junit.Assert.*;
-
 import org.junit.Before;
 import org.junit.Test;
 
-import com.example.calculator.MainActivity;
-
-import android.R;
 import android.test.ActivityInstrumentationTestCase2;
-import android.widget.TextView;
+
+import com.example.calculator.MainActivity;
 
 public class MathValidator extends
 		ActivityInstrumentationTestCase2<MainActivity> {
 
-	private TextView result;
 	private MainActivity mainActivity;
 
 	public MathValidator() {
@@ -26,7 +21,6 @@ public class MathValidator extends
 	protected void setUp() throws Exception {
 		super.setUp();
 		mainActivity = getActivity();
-		// result = (TextView) mainActivity.findViewById(R.id.result_text);
 	}
 
 	@Test
@@ -118,7 +112,7 @@ public class MathValidator extends
 		assertEquals(quot, mainActivity.divide(x, y));
 
 	}
-	
+
 	@Test
 	public void testDivideNonIntResult() {
 		int x = 5;
